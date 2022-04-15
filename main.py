@@ -3,17 +3,17 @@ from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 import time
-chrome_path ='/Users/abby/PycharmProjects/selenium/chromedriver'
+chrome_path ='your own chrome path'
 driver = webdriver.Chrome(executable_path=chrome_path)
-driver.get('https://www.linkedin.com/jobs/search/?f_AL=true&f_E=2%2C3')
+driver.get('https://www.linkedin.com/jobs/search/?f_AL=true&f_E=2%2C3') 
 
 sign_in = driver.find_element_by_link_text("Sign in")
 sign_in.click()
 
 email = driver.find_element_by_name('session_key')
-email.send_keys('yihuaxie1ha@gmail.com')
+email.send_keys('username')
 password = driver.find_element_by_name('session_password')
-password.send_keys('709394520')
+password.send_keys('userpassword')
 password.send_keys(Keys.ENTER) #enter key
 
 # find all jobs in the visible pages
